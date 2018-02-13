@@ -1,5 +1,26 @@
-# map {
+#map {
     width: 100%;
-    margin 0px;
+    margin: 0px;
     padding :0px;
+}
+
+#header {
+    border : 1px black;
+    background-color: green;
+    margin : 0px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
+
+#ver {
+    font-family: 'Indie Flower', cursive;
+}
+
+#app {
+    background-color: rgb(121, 121, 121);
+};
+
+body {
+    background-color: lightgray;
 }

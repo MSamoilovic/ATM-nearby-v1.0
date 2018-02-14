@@ -1,26 +1,36 @@
-#map {
+
+h1{
+    font-size: 45px;
     width: 100%;
-    margin: 0px;
-    padding :0px;
-}
-
-#header {
-    border : 1px black;
-    background-color: green;
-    margin : 0px;
     text-align: center;
-    font-family: 'Roboto Mono', monospace;
-    color: white;
-}
+    font-weight: bold;
+    color:black;
+    margin-bottom: 40px;
+    color: #000;
+    text-shadow: 0 2px 3px #555555;
+    font-family: Tahoma;
+  }
+  
+  
+  .mapContainer{
+    /* width: 100%;
+    margin: 0 auto;
+    margin-top:50px; */
+    display: none;
+  }
 
-#ver {
-    font-family: 'Indie Flower', cursive;
-}
-
-#app {
-    background-color: rgb(121, 121, 121);
-};
-
-body {
-    background-color: lightgray;
-}
+  #listDisplay{
+      display:none;
+  }
+  
+  #map_container{
+    position: relative;
+    height: 300;
+  }
+  #map{
+      height: 300px !important;
+      overflow: hidden;
+      padding-bottom: 22.25%;
+      padding-top: 30px;
+      position: relative;
+  }

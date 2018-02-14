@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ATM search</title>
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmOIQxesDjdB7QAOcrNtvHvRXdToQ4dmI&libraries=places"></script>
-    <link rel = "stylesheet" href = "main.css">
-    <script src = "external.js"></script>
-    <script src = "main.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="external.js"></script>
+    <script src="main.js"></script>
 </head>
-<body>
-    <div class="container-fluid" id = "header">
-        <h1>ATM nearby <span id="ver">V1.0</span></h1>
-        <div class = "container" id = "app">
-            <div id = "map"></div>
-            <div id = "startLat"></div>
-            <div id = "startLon"></div>
-            <div id="tableResults"></div>
+
+<body class="container">
+
+    <div class="row">
+        <h1>ATM Locator</h1>
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+        <button id="toggleMapBtn" class="btn btn-link" onclick="toggleMap()">Show map</button>
+        <div id="responsiveMap" class="mapContainer">
+            <h1>Responsive Map</h1>gi
+            <div id="map_container"></div>
+            <div id="map"></div>
         </div>
-        <!-- <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
-        &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
-        &markers=color:red%7Clabel:C%7C40.718217,-73.998284
-        &key=AIzaSyBmOIQxesDjdB7QAOcrNtvHvRXdToQ4dmI"> -->
-    </div>  
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+        <button id="toggleListBtn" class="btn btn-link" onclick="toggleList()">Show result list</button>
+        <div class="col-lg-12 col-md-12" id="listDisplay">
+            <label>
+                <input type='checkbox' onclick='multicurrencyFilter(this)'>Show only multicurrency ATM</label>
+            <table id="resultList" class="table"></table>
+        </div>
+    </div>
+
+    <!-- <div id="tableResults"></div>    
+    <div id="opsta"></div> -->
 </body>
+
 </html>

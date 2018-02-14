@@ -56,6 +56,7 @@ function initialize() {
                     label: i + 1 + ''
                 });
             }
+            document.getElementById("loader").style.display = "none";
         }
     });
 }
@@ -64,11 +65,11 @@ function toggleMap() {
     var currentState = document.getElementById("responsiveMap").style.display;
     if (currentState == "block") {
         document.getElementById("responsiveMap").style.display = "none";
-        document.getElementById("toggleMapBtn").innerHTML = "Show Map";
+        document.getElementById("toggleMapBtn").innerHTML = "<i class='fa fa-plus-square-o' aria-hidden='true'></i>&nbsp;Show Map";
     }
     else {
         document.getElementById("responsiveMap").style.display = "block";
-        document.getElementById("toggleMapBtn").innerHTML = "Hide Map";
+        document.getElementById("toggleMapBtn").innerHTML = "<i class='fa fa-minus-square-o' aria-hidden='true'></i>&nbsp;Hide Map";
     }
 }
 
@@ -76,11 +77,11 @@ function toggleList() {
     var currentState = document.getElementById("listDisplay").style.display;
     if (currentState == "block") {
         document.getElementById("listDisplay").style.display = "none";
-        document.getElementById("toggleListBtn").innerHTML = "Show List";
+        document.getElementById("toggleListBtn").innerHTML = "<i class='fa fa-plus-square-o' aria-hidden='true'></i>&nbsp;Show List";
     }
     else {
         document.getElementById("listDisplay").style.display = "block";
-        document.getElementById("toggleListBtn").innerHTML = "Hide List";
+        document.getElementById("toggleListBtn").innerHTML = "<i class='fa fa-minus-square-o' aria-hidden='true'></i>&nbsp;Hide List";
     }
 }
 
@@ -161,7 +162,7 @@ function drawTable(tableRows) {
 
             cell1.innerHTML = tableRows[i].mapImg;
             cell2.innerHTML = tableRows[i].name;
-            cell3.innerHTML = tableRows[i].distance;
+            cell3.innerHTML = tableRows[i].distance + 'm';
         }
     }
 }

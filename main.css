@@ -9,28 +9,66 @@ h1{
     color: #000;
     text-shadow: 0 2px 3px #555555;
     font-family: Tahoma;
-  }
-  
-  
-  .mapContainer{
-    /* width: 100%;
-    margin: 0 auto;
-    margin-top:50px; */
-    display: none;
-  }
+}
 
-  #listDisplay{
-      display:none;
-  }
+.mapContainer{
+  display: none;
+}
+
+#listDisplay{
+  display:none;
+}
   
-  #map_container{
-    position: relative;
-    height: 300;
+#map_container{
+  position: relative;
+  height: 300;
+}
+#map{
+  height: 300px !important;
+  overflow: hidden;
+  padding-bottom: 22.25%;
+  padding-top: 30px;
+  position: relative;
+}
+
+div.fade{
+  opacity:    0.5; 
+  background: #000; 
+  width:      100%;
+  height:     100%; 
+  z-index:    10;
+  top:        0; 
+  left:       0; 
+  position:   fixed; 
+  text-align: center;
+}
+
+.lds-dual-ring {
+  margin-top:50px;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 50%;
+  border-radius: 50%;
+  border: 5px solid #444444;
+  border-color: #444444 transparent #444444 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
   }
-  #map{
-      height: 300px !important;
-      overflow: hidden;
-      padding-bottom: 22.25%;
-      padding-top: 30px;
-      position: relative;
+  100% {
+    transform: rotate(360deg);
   }
+}
+
+p {
+  text-align: center;
+}

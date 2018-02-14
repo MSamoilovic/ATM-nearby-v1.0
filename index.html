@@ -16,6 +16,9 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmOIQxesDjdB7QAOcrNtvHvRXdToQ4dmI&libraries=places"></script>
     <link rel="stylesheet" href="main.css">
     <script src="external.js"></script>
@@ -23,31 +26,46 @@
 </head>
 
 <body class="container">
+    <div id="loader" class="fade">
+        <div class="lds-dual-ring"></div>
+    </div>
 
     <div class="row">
         <h1>ATM Locator</h1>
+        <p>This app searches for nearby ATMs based on user's location</p>
     </div>
-
     <div class="col-lg-6 col-md-12">
-        <button id="toggleMapBtn" class="btn btn-link" onclick="toggleMap()">Show map</button>
-        <div id="responsiveMap" class="mapContainer">
-            <h1>Responsive Map</h1>gi
-            <div id="map_container"></div>
-            <div id="map"></div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <button id="toggleMapBtn" class="btn btn-link" onclick="toggleMap()">
+                    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                    &nbsp;Show map
+                </button>
+            </div>
+            <div id="responsiveMap" class="mapContainer panel-body">
+                <h2>Results shown in map</h2>
+                <div id="map_container"></div>
+                <div id="map"></div>
+            </div>
         </div>
     </div>
 
     <div class="col-lg-6 col-md-12">
-        <button id="toggleListBtn" class="btn btn-link" onclick="toggleList()">Show result list</button>
-        <div class="col-lg-12 col-md-12" id="listDisplay">
-            <label>
-                <input type='checkbox' onclick='multicurrencyFilter(this)'>Show only multicurrency ATM</label>
-            <table id="resultList" class="table"></table>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <button id="toggleListBtn" class="btn btn-link" onclick="toggleList()">
+                    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                    &nbsp;Show result list
+                </button>
+            </div>
+            <div class="panel-body" id="listDisplay">
+                <label>
+                    <input type='checkbox' onclick='multicurrencyFilter(this)'>Show only multicurrency ATM</label>
+                <table id="resultList" class="table"></table>
+            </div>
         </div>
     </div>
 
-    <!-- <div id="tableResults"></div>    
-    <div id="opsta"></div> -->
 </body>
 
 </html>
